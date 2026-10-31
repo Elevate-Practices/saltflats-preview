@@ -291,3 +291,8 @@ svg.ln{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;strok
   .cards .card p,.cards .card .more{display:none}
   .cards .card h3{font-size:16px;margin:0}
 }
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.hours-h{font-size:17px;margin:24px 0 8px}
+.hours{border-collapse:collapse;font-size:16px;margin-bottom:8px}
+.hours th,.hours td{text-align:left;padding:6px 24px 6px 0;border-bottom:1px solid var(--line);font-weight:400}
+.hours th{color:var(--ink);font-weight:600}
