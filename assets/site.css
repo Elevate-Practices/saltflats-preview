@@ -487,3 +487,43 @@ aside.office p{font-size:15px;color:var(--muted)}
 .glass h3 a{display:inline-flex;align-items:center;gap:8px}.glass h3 svg{width:20px;height:20px;fill:#fff;transition:transform .25s}
 .glass.card-link:hover{background:rgba(255,255,255,.18)}.glass.card-link:hover h3 svg{transform:translateX(4px)}
 .aside-more{margin:12px 0 0}.aside-more .btn{width:100%}
+/* $99 new patient landing page (/new-patient/, Nov 1 2026): split hero, centered step cards, lead form, future smile card */
+.np-hero{padding:clamp(40px,6vw,88px) 0 clamp(56px,7vw,96px)}
+.np-hero h1{font-size:clamp(44px,6vw,80px)}
+.np-hero .acts{margin-top:28px;align-items:flex-start}
+.np-calls{position:relative}
+.np-calls summary{list-style:none}
+.np-calls summary::-webkit-details-marker{display:none}
+.np-calls .calls-panel{left:0;right:auto}
+.np-terms{margin:16px 0 0}
+.np-photo img{aspect-ratio:4/5;object-position:50% 25%}
+.np-steps{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.np-steps li{background:#fff;border-radius:var(--r);padding:32px 26px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.np-steps .n{margin-bottom:16px}
+.np-steps h3{margin:0 0 6px}
+.np-steps p{margin:0;color:var(--muted)}
+.lead-form{background:#fff;border-radius:var(--rp);padding:clamp(24px,3vw,36px);box-shadow:0 1px 2px rgba(14,23,38,.05),0 12px 32px rgba(14,23,38,.06);text-align:center}
+.lf-fields{display:flex;flex-direction:column;gap:6px}
+.lead-form label{font-weight:600;font-size:15px;margin-top:10px}
+.lead-form input:not([type=checkbox]),.lead-form select{width:100%;min-height:48px;border:1px solid #C9D2DD;border-radius:12px;padding:0 14px;font:inherit;font-size:17px;color:var(--ink);background:#fff}
+.lead-form input:focus-visible,.lead-form select:focus-visible{outline:3px solid var(--cyan);outline-offset:1px;border-color:var(--navy)}
+.lead-form .lf-consent{display:flex;gap:10px;align-items:flex-start;text-align:left;font-weight:400;font-size:13px;color:var(--muted);margin:14px 0 8px}
+.lf-consent input{width:20px;height:20px;margin:1px 0 0;flex:none}
+.lead-form .btn{width:100%;margin-top:6px}
+.lf-note{font-size:13px;color:var(--muted);margin:10px 0 0;border:1.5px dashed #9AA8BA;border-radius:12px;padding:8px 12px}
+.lf-done{margin:0;font-size:18px;font-weight:600}
+.center-chips{justify-content:center;margin:28px 0 0}
+.np-smile{margin:40px auto 0;max-width:560px;background:#fff;border-radius:var(--rp);padding:32px;text-align:center}
+.np-smile h3{font-size:22px}
+.np-smile p{color:var(--muted)}
+.np-final .lede{margin-left:auto;margin-right:auto;color:rgba(255,255,255,.78)}
+.np-final h2{color:#fff}
+@media (max-width:900px){.np-steps{grid-template-columns:1fr}.np-photo{order:-1}.np-photo img{aspect-ratio:4/3}}
+@media (max-width:720px){.np-hero .acts{flex-direction:column;align-items:stretch}.np-calls summary{width:100%}}
+.np-hero .np-calls{display:block}
+html .np-hero .np-calls summary.btn{width:auto;height:auto;min-height:56px;padding:0 30px;font-size:17px;border-radius:999px;background:var(--salt);display:inline-flex}
+html .np-hero .np-calls summary.btn span{position:static;width:auto;height:auto;overflow:visible;clip:auto}
+.np-calls .calls-panel{top:64px}
+.lead-form button{font-family:inherit}
+@media (max-width:900px){.np-photo img{aspect-ratio:3/2;object-position:50% 42%}}
+@media (max-width:720px){.np-calls summary.btn{display:flex;width:100%}}
