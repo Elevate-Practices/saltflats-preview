@@ -376,6 +376,8 @@ html[lang=es] .calls summary span{position:absolute;width:1px;height:1px;overflo
 /* office gallery */
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .gal.n3{grid-template-columns:repeat(3,1fr)}
+.gal.n6{grid-template-columns:repeat(3,1fr)}
+.gal.n7 figure:first-child{grid-column:span 2}.gal.n7 figure:first-child picture{height:100%}.gal.n7 figure:first-child img{height:100%;aspect-ratio:auto}
 .gal figure{margin:0}
 .gal img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
 
@@ -393,11 +395,12 @@ html[lang=es] .calls summary span{position:absolute;width:1px;height:1px;overflo
 .byline{margin-top:40px;color:var(--muted);font-size:15px}
 .band-photo.team img{aspect-ratio:16/7;object-position:center 35%}
 .band-photo.low img{object-position:center 78%}
+.band-photo.pos-85 img{object-position:center 85%}.band-photo.pos-38 img{object-position:center 38%}.band-photo.pos-62 img{object-position:center 62%}.band-photo.pos-crown img{object-position:30% 72%}
 @media (max-width:900px){.flats-bg img{object-position:center 80%}}
 
 @media (max-width:900px){
   .glass-row,.ba-grid,.posts{grid-template-columns:1fr}
-  .gal,.gal.n3{grid-template-columns:1fr 1fr}
+  .gal,.gal.n3,.gal.n6{grid-template-columns:1fr 1fr}
   .band-photo.team img{aspect-ratio:3/2}
 }
 @media (prefers-reduced-motion:reduce){.fx [data-reveal],.fx [data-reveal] img{opacity:1!important;transform:none!important}}
@@ -439,3 +442,15 @@ aside.office p{font-size:15px;color:var(--muted)}
 /* keep heads in frame: zoom from the top edge, not the center */
 .photo-r img{object-position:50% 0;transform-origin:50% 0}
 .post-card img,.post-hero img{object-position:50% 15%}
+
+/* page-head photo in the right column, framed, whole faces in view (Chris, Nov 1 2026) */
+.band.has-photo .band-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center;padding-bottom:clamp(56px,6vw,96px)}
+.band.has-photo .band-copy{padding-bottom:0}
+.band.has-photo h1{font-size:clamp(36px,4.2vw,58px)}
+.band.has-photo .band-photo picture{display:block;border-radius:28px;overflow:hidden;background:var(--gray, #F5F5F7)}
+.band.has-photo .band-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:900px){
+  .band.has-photo .band-grid{grid-template-columns:1fr;gap:28px;padding-bottom:56px}
+  .band.has-photo .band-photo picture{border-radius:20px}
+  .band.has-photo .band-photo img{aspect-ratio:4/3}
+}
