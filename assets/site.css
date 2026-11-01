@@ -271,7 +271,7 @@ html[lang=es] .calls summary span{position:absolute;width:1px;height:1px;overflo
   .offices,.quotes,.strip,.stats{grid-template-columns:1fr}
   .hero-photo img{aspect-ratio:4/3}
   .band-photo img{aspect-ratio:16/9}
-  .photo-r img{aspect-ratio:4/3}
+  .photo-r img{aspect-ratio:1/1;object-position:50% 0}
   .doc-row .doc-photo img{max-width:100%}
 }
 @media (max-width:720px){
@@ -429,3 +429,7 @@ aside.office p{font-size:15px;color:var(--muted)}
   .hero-copy{padding-top:28px;padding-bottom:40px}
   .hero-row{gap:16px}
 }
+
+/* keep heads in frame: zoom from the top edge, not the center */
+.photo-r img{object-position:50% 0;transform-origin:50% 0}
+.post-card img,.post-hero img{object-position:50% 15%}
