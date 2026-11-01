@@ -54,7 +54,10 @@ td{padding:12px 0;border-top:1px solid var(--line)}
 .fine{font-size:13px;color:var(--muted);margin-top:24px;max-width:820px}
 footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 .brand img{display:block;height:60px;width:auto}@media (max-width:600px){.brand img{height:46px}}
-.tabs{display:flex;gap:8px;margin-top:32px;border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px;margin-top:32px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{white-space:nowrap;flex:none}
+@media (max-width:600px){.tabs{display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:visible}.tab{justify-content:center;padding:10px 8px;font-size:15px}}
 .tab{appearance:none;border:0;background:none;font:inherit;font-weight:600;font-size:16px;color:var(--muted);padding:12px 18px;min-height:48px;border-bottom:3px solid transparent;margin-bottom:-1px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
 .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--coral)}
 .tab:focus-visible{outline:2px solid var(--coral);outline-offset:2px;border-radius:8px}
@@ -78,6 +81,21 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 .brandkit p{margin:0;color:var(--muted);font-size:15px}
 .brandkit .btn{margin-left:auto;flex:none}
 @media (max-width:640px){.brandkit{flex-wrap:wrap}.brandkit .btn{margin-left:0;width:100%;justify-content:center}}
+.bg-grid{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:clamp(24px,5vw,56px);align-items:center;margin-top:32px}
+.bg-grid .thumb{display:block;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12);background:#fff}
+.bg-grid .thumb img{display:block;width:100%;height:auto}
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.logo-t{background:#fff;border-radius:20px;padding:16px;text-align:center}
+.logo-t .art{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;border-radius:14px;border:1px solid var(--line);padding:14px;margin-bottom:10px}
+.logo-t .art.dark{background:#0D1B3A;border-color:#0D1B3A}
+.logo-t .art img{max-width:100%;max-height:100%;width:auto;height:auto}
+.logo-t b{display:block;font-size:15px}
+.logo-t a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;color:var(--coral-text);font-weight:600;font-size:14px}
+.swatches{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:24px}
+.swatches div{text-align:center;font-size:13px;color:var(--muted)}
+.swatches i{display:block;height:56px;border-radius:12px;border:1px solid var(--line);margin-bottom:6px}
+.swatches b{display:block;color:var(--ink);font-size:13px}
+@media (max-width:760px){.bg-grid{grid-template-columns:1fr}.bg-grid .thumb{max-width:320px}.logos{grid-template-columns:1fr 1fr}.swatches{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:760px){.compare,.fixes{grid-template-columns:1fr}.big{grid-template-columns:1fr}}
 </style>
 </head>
@@ -94,6 +112,7 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
       <a class="tab" role="tab" id="tab-scores" href="#scores" aria-controls="scores" aria-selected="true">Google scores</a>
       <a class="tab" role="tab" id="tab-checklist" href="#checklist" aria-controls="checklist" aria-selected="false">Website checklist</a>
       <a class="tab" role="tab" id="tab-seo" href="#seo" aria-controls="seo" aria-selected="false">Local SEO</a>
+      <a class="tab" role="tab" id="tab-brand" href="#brand" aria-controls="brand" aria-selected="false">Brand guide</a>
     </div>
   </div>
 </section>
@@ -169,7 +188,6 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
       <div class="metric"><b>11 of 19</b><span>On the current site, three of them only partly</span></div>
       <div class="metric"><b>16 of 19</b><span>On the new site, plus two ready to connect at launch</span></div>
     </div>
-    <div class="brandkit"><img src="brand/guide-preview.jpg" width="816" height="1056" alt="" loading="lazy"><div><h3>Brand identity guide</h3><p>Salt Flats Dentistry&#39;s logo files, colors and type on one page, made from your logo. The new site uses the sharp versions.</p></div><a class="btn" href="brand/">Open the brand guide</a></div>
     <table class="check">
       <thead><tr><th>Item</th><th>Current site</th><th>New site</th></tr></thead>
       <tbody>
@@ -200,6 +218,24 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
   </div>
 </section>
 </div>
+<div id="brand" role="tabpanel" aria-labelledby="tab-brand">
+<section class="gray">
+  <div class="wrap">
+    <h2>Your brand, in one place.</h2>
+    <p class="lead">A brand identity guide made from the Salt Flats Dentistry logo: logo files, colors, type and voice. The new site already uses the sharp logo files and these colors.</p>
+    <div class="bg-grid">
+      <a class="thumb" href="brand/salt-flats-dentistry-brand-guide.pdf"><img src="brand/guide-preview.jpg" width="816" height="1056" alt="Page one of the Salt Flats Dentistry brand guide" loading="lazy"></a>
+      <div>
+        <h3 style="margin:0 0 6px;font-size:20px">Brand identity guide</h3>
+        <p style="margin:0;color:var(--muted)">One page to hand to anyone who makes signs, shirts, ads or social posts. Logo rules, the seven brand colors, Figtree type and how Salt Flats Dentistry sounds.</p>
+        <div class="cta"><a class="btn" href="brand/salt-flats-dentistry-brand-guide.pdf" download>Download the guide (PDF)</a><a class="btn q" href="brand/">Open the brand page</a></div>
+      </div>
+    </div>
+    <div class="logos"><div class="logo-t"><div class="art"><img src="brand/salt-flats-logo-color.png" alt="Salt Flats Dentistry logo, color" loading="lazy"></div><b>Color</b><a href="brand/salt-flats-logo-color.png" download>PNG</a><a href="brand/salt-flats-logo-color.pdf" download>PDF</a></div><div class="logo-t"><div class="art dark"><img src="brand/salt-flats-logo-white.png" alt="Salt Flats Dentistry logo, white" loading="lazy"></div><b>White</b><a href="brand/salt-flats-logo-white.png" download>PNG</a><a href="brand/salt-flats-logo-white.pdf" download>PDF</a></div><div class="logo-t"><div class="art"><img src="brand/salt-flats-logo-black.png" alt="Salt Flats Dentistry logo, grayscale" loading="lazy"></div><b>Grayscale</b><a href="brand/salt-flats-logo-black.png" download>PNG</a><a href="brand/salt-flats-logo-black.pdf" download>PDF</a></div><div class="logo-t"><div class="art"><img src="brand/salt-flats-icon-color.png" alt="Salt Flats Dentistry logo, icon" loading="lazy"></div><b>Icon</b><a href="brand/salt-flats-icon-color.png" download>PNG</a><a href="brand/salt-flats-icon-color.pdf" download>PDF</a></div></div>
+    <div class="swatches"><div><i style="background:#1B305F"></i><b>Navy</b>#1B305F</div><div><i style="background:#0D1B3A"></i><b>Deep</b>#0D1B3A</div><div><i style="background:#00A4E3"></i><b>Cyan</b>#00A4E3</div><div><i style="background:#0074A6"></i><b>Cyan text</b>#0074A6</div><div><i style="background:#E3F4FC"></i><b>Light tint</b>#E3F4FC</div><div><i style="background:#F3F6F9"></i><b>Salt</b>#F3F6F9</div><div><i style="background:#0E1726"></i><b>Text</b>#0E1726</div></div>
+  </div>
+</section>
+</div>
 <footer><div class="wrap">Prepared for Salt Flats Dentistry by Elevate Practices</div></footer>
 <script>
 (function(){document.documentElement.classList.add('js');
@@ -207,7 +243,7 @@ var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
 function show(id,focus){tabs.forEach(function(t){var on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;if(on&&focus)t.focus();});}
 tabs.forEach(function(t,i){t.addEventListener('click',function(e){e.preventDefault();var id=t.getAttribute('aria-controls');show(id);history.replaceState(null,'','#'+id);});
 t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;e.preventDefault();var n=tabs[(i+k+tabs.length)%tabs.length];show(n.getAttribute('aria-controls'),true);});});
-function fromHash(){var h=location.hash.slice(1);show(h==='checklist'||h==='seo'?h:'scores');}fromHash();window.addEventListener('hashchange',fromHash);})();
+function fromHash(){var h=location.hash.slice(1);show(h==='checklist'||h==='seo'||h==='brand'?h:'scores');}fromHash();window.addEventListener('hashchange',fromHash);})();
 </script>
 </body>
 </html>
