@@ -542,3 +542,7 @@ html .np-hero .np-calls summary.btn span{position:static;width:auto;height:auto;
 .np-member{max-width:640px}
 .np-next{padding-top:clamp(56px,6vw,80px);padding-bottom:0}
 @media (max-width:720px){.tiers{grid-template-columns:1fr}}
+/* emergency page: today's hours and a review (Nov 1 2026) */
+.em-quote{max-width:720px;margin:40px auto 0;text-align:center}
+.em-quote .stars{justify-content:center}
+#today .rating{justify-content:center;margin-top:20px}

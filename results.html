@@ -97,6 +97,60 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 .swatches b{display:block;color:var(--ink);font-size:13px}
 @media (max-width:760px){.bg-grid{grid-template-columns:1fr}.bg-grid .thumb{max-width:320px}.logos{grid-template-columns:1fr 1fr}.swatches{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:760px){.compare,.fixes{grid-template-columns:1fr}.big{grid-template-columns:1fr}}
+
+/* Growth plan tab (Nov 1 2026, revised from Elevate's October growth review) */
+.big4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:32px}
+.metric{display:flex;flex-direction:column;justify-content:center;align-items:center}
+.note{margin:24px auto 0;text-align:center;color:var(--muted);max-width:760px}
+.bars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.office-bars{background:var(--panel);border-radius:20px;padding:24px}
+.office-bars h3{margin:0 0 16px;font-size:18px;text-align:center}
+.bar{margin:0 0 14px}
+.bar .lbl{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted);margin-bottom:6px}
+.bar .lbl b{color:var(--ink)}
+.bar i{display:block;height:14px;border-radius:999px;background:#8A7F7E;min-width:6px}
+.bar.us i{background:var(--coral)}
+.callout{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--coral-tint);border-radius:24px;padding:28px 32px;margin-top:24px}
+.callout b{font-size:56px;line-height:1;color:var(--coral-text);font-weight:700}
+.callout p{margin:0;color:var(--coral-text)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+.chips span{display:inline-flex;align-items:center;justify-content:center;text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:10px 22px;font-weight:600;text-decoration:line-through;text-decoration-color:var(--coral);text-decoration-thickness:2px}
+.gray .chips span{background:#fff}
+.leaks{width:100%;border-collapse:collapse;margin-top:32px;background:#fff;border-radius:20px;overflow:hidden}
+.leaks th{padding:16px 20px;text-align:left!important}
+.leaks td{padding:16px 20px;vertical-align:top;text-align:left!important;font-size:15px}
+.leaks td:first-child{font-weight:600;width:26%}
+.leaks td p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin-top:32px}
+.stat{background:var(--coral-tint);border-radius:24px;padding:32px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.stat b{font-size:clamp(56px,8vw,88px);line-height:1;color:var(--coral-text);font-weight:700}
+.stat span{color:var(--coral-text);margin-top:10px}
+.split2 ul{margin:0;padding:0;list-style:none}
+.split2 li{font-size:18px;margin:0 0 14px}
+.split2 .src{font-size:13px;color:var(--muted)}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.phase{background:#fff;border-radius:20px;padding:24px}
+.phase h3{margin:0 0 4px;font-size:18px;text-align:center}
+.phase .when{display:block;text-align:center;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-text);margin-bottom:14px}
+.phase ol{margin:0;padding-left:20px}
+.phase li{margin:0 0 10px;font-size:15px}
+.phase li em{font-style:normal;font-size:12px;font-weight:700;color:var(--green);background:var(--green-tint);border-radius:999px;padding:1px 8px;margin-left:4px;white-space:nowrap}
+.upside{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+.up{border-radius:24px;padding:32px;text-align:center;background:var(--panel);display:flex;flex-direction:column;justify-content:center;align-items:center}
+.up.hi{background:var(--coral);color:#fff}
+.up b{font-size:clamp(56px,8vw,80px);line-height:1;font-weight:700;margin:10px 0}
+.up span{font-size:15px}
+.helps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.help{background:#fff;border-radius:20px;padding:24px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:132px}
+.help h3{margin:0 0 4px;font-size:17px}
+.help p{margin:0;color:var(--muted);font-size:15px}
+.next{background:var(--ink);color:#fff;border-radius:24px;padding:40px 32px;text-align:center;margin-top:32px}
+.next h3{font-size:clamp(24px,3vw,32px);margin:0 0 8px}
+.next p{margin:0 auto;max-width:560px;color:#E3DFDF}
+.big3{grid-template-columns:repeat(3,1fr)}.big3 .metric{background:var(--panel)}.big4 .metric{min-width:0;padding:20px 12px}
+@media (max-width:900px){.big4{grid-template-columns:1fr 1fr}.big3{grid-template-columns:1fr}.bars,.phases,.helps{grid-template-columns:1fr}.split2,.upside{grid-template-columns:1fr}}
+@media (max-width:600px){.big4 .metric b{font-size:32px}}
+@media (max-width:760px){.callout{grid-template-columns:1fr;text-align:center}.leaks thead{display:none}.leaks tr{display:block;border-top:1px solid var(--line);padding:12px 0}.leaks td{display:block;border:0;padding:6px 20px;width:auto!important}.leaks td:nth-child(2)::before{content:"Current site: ";font-weight:600;color:var(--ink)}.leaks td:nth-child(3)::before{content:"New site: ";font-weight:600;color:var(--ink)}}
 </style>
 </head>
 <body>
@@ -110,6 +164,7 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
     <div class="cta"><a class="btn" href="index.html">Open the new homepage</a><a class="btn q" href="https://saltflatsdentistry.com/">See the current site</a></div>
     <div class="tabs" role="tablist" aria-label="Scorecard views">
       <a class="tab" role="tab" id="tab-scores" href="#scores" aria-controls="scores" aria-selected="true">Google scores</a>
+      <a class="tab" role="tab" id="tab-growth" href="#growth" aria-controls="growth" aria-selected="false">Growth plan</a>
       <a class="tab" role="tab" id="tab-checklist" href="#checklist" aria-controls="checklist" aria-selected="false">Website checklist</a>
       <a class="tab" role="tab" id="tab-seo" href="#seo" aria-controls="seo" aria-selected="false">Local SEO</a>
       <a class="tab" role="tab" id="tab-brand" href="#brand" aria-controls="brand" aria-selected="false">Brand guide</a>
@@ -179,6 +234,90 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 </section>
 
 </div>
+<div id="growth" role="tabpanel" aria-labelledby="tab-growth">
+<section class="gray">
+  <div class="wrap">
+    <span class="pill">Growth review</span>
+    <h2 style="margin-top:16px">What&#39;s already working.</h2>
+    <p class="lead">Growth opportunities across three offices, updated with Google&#39;s numbers on November 1, 2026.</p>
+    <div class="big4">
+      <div class="metric"><b>4.8</b><span>star average on Google</span></div>
+      <div class="metric"><b>1,100+</b><span>Google reviews across three offices</span></div>
+      <div class="metric"><b>$99</b><span>new patient visit</span></div>
+      <div class="metric"><b>3</b><span>offices, four doctors</span></div>
+    </div>
+    <p class="note">Plus same-day CEREC crowns, CBCT 3D X-rays and digital scanners.</p>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2>New patients choose their dentist on the map.</h2>
+    <p class="lead">Review count, photos and hours decide who gets the call. Here&#39;s each office next to the busiest general dentist nearby on Google Maps.</p>
+    <div class="bars"><div class="office-bars"><h3>Fashion Place, Murray</h3><div class="bar us"><div class="lbl"><span>Salt Flats Fashion Place</span><b>673 · 4.8★</b></div><i style="width:51%" aria-hidden="true"></i></div><div class="bar"><div class="lbl"><span>Emergency Dentist in Salt Lake City</span><b>1,307 · 4.9★</b></div><i style="width:100%" aria-hidden="true"></i></div></div><div class="office-bars"><h3>Herriman</h3><div class="bar us"><div class="lbl"><span>Salt Flats Herriman</span><b>418 · 4.9★</b></div><i style="width:32%" aria-hidden="true"></i></div><div class="bar"><div class="lbl"><span>Herriman Family Dental</span><b>756 · 4.8★</b></div><i style="width:58%" aria-hidden="true"></i></div></div><div class="office-bars"><h3>South Bangerter, Riverton</h3><div class="bar us"><div class="lbl"><span>Salt Flats South Bangerter</span><b>28 · 4.9★</b></div><i style="width:2%" aria-hidden="true"></i></div><div class="bar"><div class="lbl"><span>Silver Ridge Dental Care</span><b>548 · 4.9★</b></div><i style="width:42%" aria-hidden="true"></i></div></div></div>
+    <div class="callout"><b>28</b><p>South Bangerter has a 4.9 rating and only 28 reviews. Dentists of Riverton has 316 and Silver Ridge Dental Care has 548. Reaching 150 reviews in six months takes about one new review per working day.</p></div>
+  </div>
+</section>
+<section class="gray">
+  <div class="wrap">
+    <h2>Old practice names still show up online.</h2>
+    <p class="lead">Google trusts a practice more when its name, address and phone match everywhere.</p>
+    <div class="chips"><span>Fashion Place Dental PC</span><span>Cottonwood Family Dental</span><span>Grins for Everyone</span><span>Salt Falts Dentistry</span></div>
+    <p class="note">Plus a wrong street number and phone number on the Better Business Bureau. The new site uses one name, address and phone on every page, in English and Spanish.</p>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2>Strong bones, a few leaks.</h2>
+    <p class="lead">Where the current site loses patients, and what the new site already does about it.</p>
+    <table class="leaks"><thead><tr><th>Area</th><th>Current site</th><th>New site</th></tr></thead><tbody><tr><td>Reviews</td><td><span class="tag r">Leak</span><p>The newest review on the site is from September 2025, and the count still reads 974+.</p></td><td><span class="tag a">Ready</span><p>A live Google review feed, ready to switch on at launch. Until then the count matches Google: 1,100+.</p></td></tr><tr><td>Review link</td><td><span class="tag r">Leak</span><p>Happy patients have no easy way to leave a review.</p></td><td><span class="tag a">Ready</span><p>One review link per office, sent by text after every visit. Set up at launch.</p></td></tr><tr><td>Blog</td><td><span class="tag r">Leak</span><p>The blog page still says &quot;Articles coming soon&quot;.</p></td><td><span class="tag g">Fixed</span><p>Three starter articles now, then a new local article each month.</p></td></tr><tr><td>Emergency page</td><td><span class="tag r">Leak</span><p>No hours and no reviews, the two things a patient in pain looks for first.</p></td><td><span class="tag g">Fixed</span><p>Today&#39;s hours for each office and a patient review, right under the answer.</p></td></tr><tr><td>Spanish</td><td><span class="tag r">Leak</span><p>Every page is English only.</p></td><td><span class="tag g">Fixed</span><p>Every page in Spanish, each paired with its English page for Google.</p></td></tr><tr><td>Instagram landing page</td><td><span class="tag r">Leak</span><p>&quot;Book Your First Visit&quot; goes nowhere, and Book Now only books Herriman.</p></td><td><span class="tag g">Fixed</span><p>A $99 page that books all three offices, with a call-back form and tracking ready.</p></td></tr><tr><td>No insurance</td><td><span class="tag r">Leak</span><p>Nothing for patients without insurance beyond the $99 visit.</p></td><td><span class="tag g">Fixed</span><p>A sample membership plan with adult and kids prices for Salt Flats to set.</p></td></tr></tbody></table>
+  </div>
+</section>
+<section class="gray">
+  <div class="wrap">
+    <h2>Dr. Martinez speaks Spanish. The current site does not.</h2>
+    <div class="split2">
+      <div class="stat"><b>15–23%</b><span>of residents in neighborhoods near the Murray office are Hispanic</span></div>
+      <ul><li>Every page on the current site is English only.</li><li>Dentists of Riverton already advertises Spanish.</li><li>The new site has every page in Spanish, and Medicaid at South Bangerter is easy to find.</li><li class="src">Source: Utah Department of Health, IBIS, 2018 to 2022</li></ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2>Followers are split across five accounts.</h2>
+    <div class="big4 big3">
+      <div class="metric"><b>2</b><span>Instagram handles</span></div>
+      <div class="metric"><b>3</b><span>Facebook pages</span></div>
+      <div class="metric"><b>135</b><span>followers on the main Facebook page</span></div>
+    </div>
+    <p class="note">One page and one handle let every post build on the last.</p>
+  </div>
+</section>
+<section class="gray">
+  <div class="wrap">
+    <h2>The first 90 days.</h2>
+    <p class="lead">Quick wins first, then launch, then growth. Green tags show what&#39;s already built on the new site.</p>
+    <div class="phases"><div class="phase"><span class="when">First 30 days</span><h3>Quick wins</h3><ol><li>Correct names, categories and hours on all three Google profiles</li><li>Turn on review requests by text after every visit</li><li>Fix the Better Business Bureau listing and claim open directories</li><li>Test booking and tap-to-call on a phone at each office <em>Booking links set</em></li><li>Add a review link and a live review feed to the site <em>Ready on new site</em></li><li>Keep one Facebook page and one Instagram account</li></ol></div><div class="phase"><span class="when">Days 31 to 60</span><h3>Launch</h3><ol><li>Launch the new site in English and Spanish <em>Built</em></li><li>Switch on the website chat that texts the front desk</li><li>Send Instagram traffic to the $99 page, with every call and booking tracked <em>Page built</em></li><li>Phone training, so more calls become appointments</li></ol></div><div class="phase"><span class="when">Days 61 to 90</span><h3>Grow</h3><ol><li>Google Ads for each office, with every call and booking tracked</li><li>A new local article each month, in English and Spanish</li><li>Set membership prices and offer the plan at every visit <em>Sample page built</em></li><li>Push South Bangerter toward 150 Google reviews</li></ol></div></div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2>What more new patients could be worth.</h2>
+    <div class="upside">
+      <div class="up"><span>15 more new patients a month</span><b>$216K</b><span>first-year value</span></div>
+      <div class="up hi"><span>30 more new patients a month</span><b>$432K</b><span>first-year value</span></div>
+    </div>
+    <p class="note">That&#39;s 5 or 10 more new patients a month at each office. Estimate at $1,200 first-year value per new patient. Your own numbers will sharpen it.</p>
+  </div>
+</section>
+<section class="gray">
+  <div class="wrap">
+    <h2>How Elevate helps.</h2>
+    <div class="helps"><div class="help"><h3>Google profiles</h3><p>Managed for all three offices</p></div><div class="help"><h3>Review engine</h3><p>A text after every visit, one link per office</p></div><div class="help"><h3>Website</h3><p>Spanish pages and local articles</p></div><div class="help"><h3>Social media</h3><p>One plan, posted for you</p></div><div class="help"><h3>Google Ads</h3><p>Every call and booking tracked</p></div><div class="help"><h3>Phone training</h3><p>So more calls become appointments</p></div></div>
+    <div class="next"><h3>Next step: a 30-minute growth call.</h3><p>We confirm the numbers with you and map the first 30 days, office by office.</p></div>
+    <p class="fine">Google ratings and review counts are from Google Maps on November 1, 2026; &quot;busiest nearby&quot; means the general dentist near each office with the most Google reviews that we found. Old listing names, the Better Business Bureau listing, social accounts, Dr. Martinez&#39;s Spanish, Dentists of Riverton&#39;s Spanish ads and the September 2025 review date are from Elevate&#39;s October 2026 review. The upside is an estimate, not a promise.</p>
+  </div>
+</section>
+</div>
 <div id="checklist" role="tabpanel" aria-labelledby="tab-checklist">
 <section class="gray">
   <div class="wrap">
@@ -244,7 +383,7 @@ var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
 function show(id,focus){tabs.forEach(function(t){var on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;if(on&&focus)t.focus();});}
 tabs.forEach(function(t,i){t.addEventListener('click',function(e){e.preventDefault();var id=t.getAttribute('aria-controls');show(id);history.replaceState(null,'','#'+id);});
 t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;e.preventDefault();var n=tabs[(i+k+tabs.length)%tabs.length];show(n.getAttribute('aria-controls'),true);});});
-function fromHash(){var h=location.hash.slice(1);show(h==='checklist'||h==='seo'||h==='brand'?h:'scores');}fromHash();window.addEventListener('hashchange',fromHash);})();
+function fromHash(){var h=location.hash.slice(1);show(h==='growth'||h==='checklist'||h==='seo'||h==='brand'?h:'scores');}fromHash();window.addEventListener('hashchange',fromHash);})();
 </script>
 </body>
 </html>
