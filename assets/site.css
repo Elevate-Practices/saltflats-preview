@@ -1,9 +1,9 @@
 /* Figtree (OFL), self-hosted variable font; optional display + preload keeps layout from shifting */
 @font-face{font-family:"Figtree";font-style:normal;font-weight:300 900;font-display:optional;src:url(/assets/fonts/figtree-latin.woff2) format("woff2")}
 /* Salt Flats Dentistry — "Wide horizon", light-led. Figtree only. Written from scratch (Oct 31 2026).
-   Neutrals: white, salt-white #F3F6F9, ink #0E1726. Brand navy #152B5B is the only Book fill (white text 13:1).
-   Deep navy #0D1B3A: the $99 band and the footer. Cyan #00A3E0 appears only on navy. */
-:root{--ink:#0E1726;--muted:#4A5568;--salt:#F3F6F9;--line:#DDE3EA;--navy:#152B5B;--navy-2:#1E3A78;--deep:#0D1B3A;--cyan:#00A3E0;--cyan-text:#5CC8F2;--r:14px;--rp:20px;--w:1200px}
+   Neutrals: white, salt-white #F3F6F9, ink #0E1726. Brand navy #1B305F (brand guide, Nov 1 2026) is the only Book fill (white text 12:1).
+   Deep navy #0D1B3A: the $99 band and the footer. Cyan #00A4E3 appears only on navy. */
+:root{--ink:#0E1726;--muted:#4A5568;--salt:#F3F6F9;--line:#DDE3EA;--navy:#1B305F;--navy-2:#1E3A78;--deep:#0D1B3A;--cyan:#00A4E3;--cyan-text:#5CC8F2;--r:14px;--rp:20px;--w:1200px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
@@ -310,7 +310,7 @@ html[lang=es] .calls summary span{position:absolute;width:1px;height:1px;overflo
 .hours th{color:var(--ink);font-weight:600}
 
 /* ---- salt flats layer (Nov 1 2026): crust texture, photo bands, before/after, zoom, blog ---- */
-.gray{background:var(--salt) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='none' stroke='%23152B5B' stroke-opacity='.055' stroke-width='1.4' stroke-linejoin='round'%3E%3Cpath d='M0 62 48 40l58 30 62-18 70 26 82-22M48 40 36 0M106 70l-8 76 70 34 62-30 8-74M168 52l0 -52M238 78l82 46M98 146 22 178 0 168M168 180l-14 86 74 30M230 150l90 30M22 178l26 92-48 20M48 270l106-4M228 296l92-28M154 266l-8 54M300 320l20-52'/%3E%3C/g%3E%3C/svg%3E") 0 0/320px 320px}
+.gray{background:var(--salt) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='none' stroke='%231B305F' stroke-opacity='.055' stroke-width='1.4' stroke-linejoin='round'%3E%3Cpath d='M0 62 48 40l58 30 62-18 70 26 82-22M48 40 36 0M106 70l-8 76 70 34 62-30 8-74M168 52l0 -52M238 78l82 46M98 146 22 178 0 168M168 180l-14 86 74 30M230 150l90 30M22 178l26 92-48 20M48 270l106-4M228 296l92-28M154 266l-8 54M300 320l20-52'/%3E%3C/g%3E%3C/svg%3E") 0 0/320px 320px}
 .crust{position:relative;overflow:hidden;isolation:isolate}
 .crust-bg{position:absolute;inset:0;z-index:-1}
 .crust-bg picture,.crust-bg img{width:100%;height:100%;object-fit:cover;display:block}
@@ -410,9 +410,9 @@ aside.office p{font-size:15px;color:var(--muted)}
 .hero-media{position:absolute;inset:0}
 .hero-media picture,.hero-media img{display:block;width:100%;height:100%}
 .hero-media img{object-fit:cover;object-position:50% 22%}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(9,18,40,.9) 0%,rgba(9,18,40,.66) 28%,rgba(9,18,40,0) 54%),linear-gradient(to right,rgba(9,18,40,.28),rgba(9,18,40,0) 50%)}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(9,18,40,.92) 0%,rgba(9,18,40,.74) 32%,rgba(9,18,40,.3) 62%,rgba(9,18,40,.18) 100%),linear-gradient(to right,rgba(9,18,40,.42) 0%,rgba(9,18,40,.22) 45%,rgba(9,18,40,0) 72%)} /* darker scrim, Chris Nov 1 2026 */
 .hero-copy{position:relative;width:100%;padding-bottom:clamp(32px,4vw,56px)}
-.hero-stage .eyebrow{color:var(--cyan-text);margin-bottom:10px}
+.hero-stage .eyebrow{color:#fff;opacity:.92;margin-bottom:10px;text-shadow:0 1px 12px rgba(9,18,40,.5)}
 .hero-stage h1{color:#fff;font-size:clamp(40px,4.4vw,68px);max-width:780px;margin-bottom:.3em;text-shadow:0 2px 24px rgba(9,18,40,.35)}
 .hero-stage .hero-sub{color:rgba(255,255,255,.92);max-width:600px;margin:0}
 .hero-row{display:flex;align-items:center;flex-wrap:wrap;gap:12px 28px;margin-top:26px}

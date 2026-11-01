@@ -72,6 +72,12 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 .tag.a{background:var(--amber-tint);color:var(--amber)}
 .tag.r{background:var(--coral-tint);color:var(--coral-text)}
 @media (max-width:760px){.tally{grid-template-columns:1fr}.check thead{display:none}.check tr{display:block;border-top:1px solid var(--line);padding:12px 0}.check td{display:block;border:0;padding:6px 20px;width:auto!important}.check td:nth-child(2)::before{content:"Current site: ";font-weight:600;color:var(--ink)}.check td:nth-child(3)::before{content:"New site: ";font-weight:600;color:var(--ink)}}
+.brandkit{display:flex;align-items:center;gap:24px;background:#fff;border-radius:20px;padding:20px 24px;margin-top:20px}
+.brandkit img{display:block;width:96px;height:auto;border-radius:10px;border:1px solid var(--line);flex:none}
+.brandkit h3{margin:0 0 2px;font-size:18px}
+.brandkit p{margin:0;color:var(--muted);font-size:15px}
+.brandkit .btn{margin-left:auto;flex:none}
+@media (max-width:640px){.brandkit{flex-wrap:wrap}.brandkit .btn{margin-left:0;width:100%;justify-content:center}}
 @media (max-width:760px){.compare,.fixes{grid-template-columns:1fr}.big{grid-template-columns:1fr}}
 </style>
 </head>
@@ -163,6 +169,7 @@ footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(
       <div class="metric"><b>11 of 19</b><span>On the current site, three of them only partly</span></div>
       <div class="metric"><b>16 of 19</b><span>On the new site, plus two ready to connect at launch</span></div>
     </div>
+    <div class="brandkit"><img src="brand/guide-preview.jpg" width="816" height="1056" alt="" loading="lazy"><div><h3>Brand identity guide</h3><p>Salt Flats Dentistry&#39;s logo files, colors and type on one page, made from your logo. The new site uses the sharp versions.</p></div><a class="btn" href="brand/">Open the brand guide</a></div>
     <table class="check">
       <thead><tr><th>Item</th><th>Current site</th><th>New site</th></tr></thead>
       <tbody>
